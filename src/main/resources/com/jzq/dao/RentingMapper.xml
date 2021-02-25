@@ -6,4 +6,14 @@
         values(#{housingEstate}, #{price}, #{size}, #{face},
         #{bedroom}, #{subway}, #{company}, #{score})
     </insert>
+
+    <resultMap id="HousingEstateInfoVO" type="com.jzq.vo.HousingEstateInfoVO">
+        <id property="housingEstate" column="housing_estate"></id>
+    </resultMap>
+
+    <select id="selectHouseInfoOrderByScore" resultMap="HousingEstateInfoVO">
+        select housing_estate, price, score, h.size
+        from housing_estate_info h
+        order by score desc
+    </select>
 </mapper>
