@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzq.dao.RentingMapper">
+    <insert id="insertHouseInfo" parameterType="com.jzq.bean.HousingEstateInfo" >
+        insert into housing_estate_info
+        values(#{housingEstate}, #{price}, #{size}, #{face},
+        #{bedroom}, #{subway}, #{company}, #{score})
+    </insert>
+</mapper>
