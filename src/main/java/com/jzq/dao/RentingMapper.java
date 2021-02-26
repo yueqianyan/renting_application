@@ -1,6 +1,7 @@
 package com.jzq.dao;
 
 import com.jzq.bean.HousingEstateInfo;
+import com.jzq.bean.PageInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,5 +15,5 @@ import java.util.List;
 public interface RentingMapper {
     void insertHouseInfo(HousingEstateInfo housingEstateInfo);
 
-    List<HousingEstateInfo> selectHouseInfoOrderByScore();
+    List<HousingEstateInfo> selectHouseInfoOrderByScore(PageInfo pageInfo);
 }

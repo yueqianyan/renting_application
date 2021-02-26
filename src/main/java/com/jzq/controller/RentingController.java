@@ -1,7 +1,9 @@
 package com.jzq.controller;
 
 import com.jzq.bean.HousingEstateInfo;
+import com.jzq.bean.PageInfo;
 import com.jzq.service.RentingService;
+import com.jzq.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +26,7 @@ public class RentingController {
     }
 
     @PostMapping("/queryHouseInfo")
-    public List<HousingEstateInfo> queryHouseInfo() {
-        return rentingService.selectHouseInfoOrderByScore();
+    public Result queryHouseInfo(@RequestBody PageInfo pageInfo) {
+        return rentingService.selectHouseInfoOrderByScore(pageInfo);
     }
 }

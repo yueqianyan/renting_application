@@ -1,7 +1,9 @@
 package com.jzq.service;
 
 import com.jzq.bean.HousingEstateInfo;
+import com.jzq.bean.PageInfo;
 import com.jzq.dao.RentingMapper;
+import com.jzq.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,5 @@ import java.util.List;
  */
 public interface RentingService {
     int setHouseInfo(HousingEstateInfo housingEstateInfo);
-    List<HousingEstateInfo> selectHouseInfoOrderByScore();
+    Result selectHouseInfoOrderByScore(PageInfo pageInfo);
 }

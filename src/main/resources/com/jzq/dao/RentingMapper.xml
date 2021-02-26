@@ -14,5 +14,8 @@
         select housing_estate, score
         from housing_estate_info
         order by score desc
+        <if test="size != 0 or current != 0">
+            limit #{current}, #{size}
+        </if>
     </select>
 </mapper>
