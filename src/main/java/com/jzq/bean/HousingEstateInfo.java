@@ -1,19 +1,44 @@
 package com.jzq.bean;
 
-import lombok.Data;
-
 /**
  * @author jianzhiqiang
  * @date 2021/2/25 23:00
  */
-@Data
 public class HousingEstateInfo {
     private String housingEstate;
-    private int price;
-    private double size;
-    private float face;
-    private float bedroom;
     private float subway;
-    private float company;
+    private int company;
     private int score;
+
+    public String getHousingEstate() {
+        return housingEstate;
+    }
+
+    public void setHousingEstate(String housingEstate) {
+        this.housingEstate = housingEstate;
+    }
+
+    public float getSubway() {
+        return subway;
+    }
+
+    public void setSubway(float subway) {
+        this.subway = subway;
+    }
+
+    public int getCompany() {
+        return company;
+    }
+
+    public void setCompany(int company) {
+        this.company = company;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

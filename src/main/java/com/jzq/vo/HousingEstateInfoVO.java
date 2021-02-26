@@ -9,6 +9,5 @@ import lombok.Data;
 @Data
 public class HousingEstateInfoVO {
     private String housingEstate;
-    private int price;
     private int score;
 }

@@ -2,6 +2,7 @@ package com.jzq.service.impl;
 
 import com.jzq.bean.HousingEstateInfo;
 import com.jzq.dao.RentingMapper;
+import com.jzq.factory.GradeFactory;
 import com.jzq.service.RentingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class RentingServiceImpl implements RentingService {
     private RentingMapper rentingMapper;
 
     public int setHouseInfo(HousingEstateInfo housingEstateInfo) {
+        new GradeFactory().gradeHousing(housingEstateInfo);
         rentingMapper.insertHouseInfo(housingEstateInfo);
         return 1;
     }
